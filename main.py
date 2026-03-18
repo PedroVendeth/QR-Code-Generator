@@ -16,7 +16,7 @@ def gerar_qrcode(dados, nome_arquivo):
     img.save(nome_arquivo + ".png") # vai salvar a imagem do QR code em um arquivo com o nome especificado e formatado como png;
     
 def limpar_tela():
-    os.system('cls')
+    os.system('cls' if os.name == 'nt' else 'clear')
 
 if __name__ == "__main__":
     while True:
